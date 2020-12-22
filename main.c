@@ -6,7 +6,7 @@
 /*   By: nsterk <nsterk@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 17:36:00 by nsterk        #+#    #+#                 */
-/*   Updated: 2020/12/22 17:30:00 by sofferha      ########   odam.nl         */
+/*   Updated: 2020/12/22 18:51:27 by sofferha      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ int		changeColour(int colour)
 		colour = 0;
 	return (colour);
 }
+
+// made with love, by Naomi Sterk and Swenne (edits)
 
 int	main(void)
 {

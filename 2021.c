@@ -6,12 +6,11 @@
 /*   By: nsterk <nsterk@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 17:36:00 by nsterk        #+#    #+#                 */
-/*   Updated: 2020/12/22 15:28:43 by nsterk        ########   odam.nl         */
+/*   Updated: 2020/12/22 18:49:50 by sofferha      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <ncurses.h>
 #include <unistd.h>
 #include <stdlib.h>
 
