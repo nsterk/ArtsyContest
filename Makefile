@@ -5,7 +5,7 @@ FILE2 = 2021.c
 
 .PHONY: clean
 
-all: make longest year ever
+all: longest year ever
 
 longest: 
 	@clang++ loading.cpp -o forever
@@ -19,6 +19,9 @@ ever:
 2021:
 	@gcc $(FILE2) $(FLAGS)
 	@./a.out
+
+work:
+	@echo "			WE WISH YOU ALL A BETTER NEW YEAR "
 
 clean:
 	rm -rf a.out
