@@ -6,7 +6,7 @@
 /*   By: nsterk <nsterk@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 17:36:00 by nsterk        #+#    #+#                 */
-/*   Updated: 2020/12/22 10:07:25 by nsterk        ########   odam.nl         */
+/*   Updated: 2020/12/22 10:33:13 by nsterk        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,23 +52,32 @@ void	putPic(char **pic, int x, int y)
 void setColour(colour)
 {
 	if (colour == 0)
-		printf("\e[0;31m");
+		printf("\e[0;38;5;88m");
 	else if (colour == 1)
-		printf("\e[0;38;5;206m");
+		printf("\e[0;38;5;125m");
 	else if (colour == 2)
-		printf("\e[0;35m");
+		printf("\e[0;38;5;162m");
 	else if (colour == 3)
-		printf("\e[0;90m");
+		printf("\e[0;38;5;199m");
 	else if (colour == 4)
-		printf("\e[0;36m");
+		printf("\e[0;38;5;128m");
 	else if (colour == 5)
-		printf("\e[0;16m");
-
+		printf("\e[0;38;5;93m");
+	else if (colour == 6)
+		printf("\e[0;38;5;62m");
+	else if (colour == 7)
+		printf("\e[0;38;5;27m");
+	else if (colour == 8)
+		printf("\e[0;38;5;25m");
+	else if (colour == 9)
+		printf("\e[0;38;5;23m");
+	else if (colour == 10)
+		printf("\e[0;38;5;22m");
 }
 
 int		changeColour(int colour)
 {
-	if (colour < 5)
+	if (colour < 10)
 		colour++;
 	else
 		colour = 0;
