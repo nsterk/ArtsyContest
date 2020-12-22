@@ -24,4 +24,4 @@ work:
 	@echo "			WE WISH YOU ALL A BETTER NEW YEAR "
 
 clean:
-	rm -rf a.out
+	rm -rf a.out 2021
