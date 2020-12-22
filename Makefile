@@ -17,8 +17,7 @@ ever:
 	@clear
 
 2021:
-	@gcc $(FILE2) $(FLAGS)
-	@./a.out
-
+	@gcc $(FILE2) $(FLAGS) -o 2021
+	@./2021
 clean:
-	rm -rf a.out
+	rm -rf a.out 2021
