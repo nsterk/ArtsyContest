@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   main.c                                             :+:    :+:            */
+/*   2021.c                                             :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nsterk <nsterk@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/21 17:36:00 by nsterk        #+#    #+#                 */
-/*   Updated: 2020/12/22 14:51:33 by nsterk        ########   odam.nl         */
+/*   Updated: 2020/12/22 15:28:43 by nsterk        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,23 +85,20 @@ int		changeColour(int colour)
 int	main(void)
 {
 	char	**pic;
-	int		x = 2;
-	int		y = 1;
+	int		x = 20;
+	int		y = 20;
 	int		timer = 3;
 	int		colour = 0;
 	                               
-	pic[0] = " #####     ####    #####     #### ";
-	pic[1] = "##   ##   ##  ##  ##   ##   ##  ##";
-	pic[2] = "    ###  ##   ##      ###  ##   ##";
-	pic[3] = "   ###   ##   ##     ###   ##   ##";
-	pic[4] = "  ##     ##   ##    ##     ##   ##";
-	pic[5] = " ##      ##  ##    ##      ##  ## ";
-	pic[6] = "#######   ####    #######   ####  ";
+	pic[0] = " #####     ####    #####    ###  ";
+	pic[1] = "##   ##   ##  ##  ##   ##  ###   ";
+	pic[2] = "    ###  ##   ##      ###     #  ";
+	pic[3] = "   ###   ##   ##     ###     ##  ";
+	pic[4] = "  ##     ##   ##    ##       ##  ";
+	pic[5] = " ##      ##  ##    ##        ##  ";
+	pic[6] = "#######   ####    #######  ######";
 	pic[7] = NULL;
-
-	while (timer)
-	{
-		while (x < 150)//change to 150 if fullscreen? (on my mac)
+		while (x)
 		{
 			printf("\e[1;1H\e[2J");
 			setColour(colour);
@@ -114,29 +111,18 @@ int	main(void)
 			}
 			else if (!y)
 				colour = changeColour(colour);
-			x++;
-			y++;
-		}
-		colour = changeColour(colour);
-		while (x > 5)
-		{
-			printf("\e[1;1H\e[2J");
-			setColour(colour);
-			putPic(pic, x, y);
-			usleep(100000);
-			if (y > 47)
-			{
-				y = -y;
-				colour = changeColour(colour);
-			}
-			else if (!y)
-				colour = changeColour(colour);
-			y++;
+			y--;
 			x--;
 		}
-		colour = changeColour(colour);
-		timer--;
-	}
+		while (colour < 10)
+		{
+			printf("\e[1;1H\e[2J");
+			setColour(colour);
+			colour++;
+			putPic(pic, x, y);
+			usleep(500000);
+			printf("\e[1;1H\e[2J");
+		}
 	printf("\e[0m");
 	return (0);
 }
